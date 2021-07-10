@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <div class="row">
+    <!-- <div class=" col-lg-4 col-md-6 col-sm-12 mb-4"> -->
+      <div class="card" style="width: 25rem;">
+        <a routerLink="https://www.google.com/"><img  *ngIf="propriete.Image"   src="assets/images/{{propriete.Image}}.jpg" class="card-img-top" ></a>   <!--{{propriete.Image}}.jpg: String INTERPOLATION pour afficher les differentes images des maisons-->
+        <a routerLink="#"><img  *ngIf="!propriete.Image"   src="assets/images/defaulthouse.jpg" class="card-img-top"></a>   <!--Si par hasard, il y a une image qui n'est pas dans l'Objet JSON, la photo defaulthouse sera affichée-->
+
+        <div class="card-body">
+            <!--Interpolation-->
+            <h2> {{propriete.Name}} </h2>
+            <h5 class="card-title"> {{propriete.Type}} </h5>
+            <h6> {{propriete.Price}} </h6>
+            <a routerLink="/DetailPropriete/{{propriete.Id}} " class="btn btn-primary">Contacter</a>   <!--{{propriete.Id}}: pour afficher l'ID de chaque produit dans l'URL. Important car chaque pdt a un ID unique-->
+          </div>                                                                                        <!--Apres, il faut aller sur la page du produit (detail-propriete.ts) et faire -->
+      </div>
+  </div>
+
+</body>
+</html>

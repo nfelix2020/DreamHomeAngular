@@ -1,0 +1,65 @@
+/*CSS INDEX*/
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: 'Taviraj', serif;
+}
+ /* .nav-link{
+      color: black;
+      font-family: 'Taviraj', serif;
+} */
+/* .navbar-brand{
+  color: black;
+  font-family: 'Taviraj', serif;
+} */
+/* .fas-hamburger{
+  color: black;
+  font-size: 34px;
+} */
+
+.main{
+  background:#000000;
+  background-size: 100% 100%;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+
+}
+
+.card{
+  border: none;
+  outline: none;
+  background-color:lightgray;
+}
+.main span{
+  color: rgb(110, 101, 101);
+  font-weight: 600;
+}
+
+.main select{
+  height:40px;
+  width: 90%;
+  outline: none;
+  padding: 0 20px;
+  background-color: lightgray;
+}
+.btn1{
+  background-color: coral;
+  color: white;
+  height: 40px;
+  width: 90%;
+  margin-top: 32px;
+  outline: none;
+  border: none;
+}
+.btn1:hover{
+  background-color: rgb(231, 111, 67);
+  transition: 0.5s;
+}
+

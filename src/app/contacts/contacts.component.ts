@@ -1,0 +1,62 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-contacts',
+  templateUrl: './contacts.component.html',
+  styleUrls: ['./contacts.component.css']
+})
+export class ContactsComponent implements OnInit {
+
+  form: FormGroup;
+  constructor( private fb: FormBuilder, private http: HttpClient,
+    private router:Router) { 
+    
+    this.form=this.fb.group(
+      {
+        nom:'' ,
+        prenom:'',
+        ville:'',
+        message: '',
+        code_postale:'',
+        type_appart:''
+
+      });
+    
+      
+  }
+    
+  ngOnInit(): void {
+    
+  }
+
+ 
+ onsubmit():void{
+
+    this.http.post('https://127.0.0.1:8000/api/contacts',this.form.getRawValue())
+      .subscribe(res=>{
+      this.router.navigate(['/Acceuil'])
+    });
+    
+    }
+
+    
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

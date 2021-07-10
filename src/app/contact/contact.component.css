@@ -1,0 +1,46 @@
+/* start: contact styles */
+
+#contact {
+  margin-bottom: 0;
+  background: #f8f9fa;
+  padding: 4rem 0 8rem;
+}
+
+#form-container {
+  background: #fff;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+#form-container h3 {
+  color: #000;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+}
+
+#form-container label {
+  display: block;
+  color: #000;
+  margin-top: 1rem;
+}
+
+#form-container input, #form-container textarea {
+  display: block;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  width: 100%;
+  box-sizing: border-box;
+  height: 43px;
+  font-family: "Roboto", "Helvetica", "Sans-serif";
+  font-size: 1rem;
+  color: #495057;
+}
+
+#form-container textarea {
+  height: 170px;
+  margin-bottom: 2rem;
+  resize: none;
+}
+
+/* end: contact us styles */

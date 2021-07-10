@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark auto-hiding-navbar">
+    <div class="container">
+      <a routerLink="/Acceuil" class="navbar-brand">DREAMHOME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto" *ngIf="!authenticated">
+            <li><a routerLinkActive="active" routerLink="/Acceuil" class="nav-link px-4"> Acceuil</a></li> -->
+            <!-- <li><a routerLinkActive="active" routerLink="/index" class="nav-link px-4"> Acceuil</a></li> -->
+            <li><a routerLinkActive="active" routerLink="/Acheter" class="nav-link px-4"> Acheter</a></li>
+            <li><a routerLinkActive="active" routerLink="/Louer" class="nav-link px-4"> Louer</a></li>
+            <!-- <li><a routerLinkActive="active" routerLink="/Vendre" class="nav-link px-4"> Vendre</a></li> -->
+            <li><a routerLinkActive="active" routerLink="/Contacts" class="nav-link px-4"> Contacts</a></li>
+            <li><a routerLinkActive="active" routerLink="/Connexion" class="nav-link px-4"> Connexion</a></li>
+            <li><a routerLinkActive="active" routerLink="/Creercompte" class="nav-link px-4"> Créer un compte</a></li>
+        </ul>
+
+        <ul class="navbar-nav m-auto" *ngIf="authenticated">
+          <li><a routerLinkActive="active" routerLink="/Acceuil" class="nav-link px-4"> Acceuil</a></li> -->
+          <!-- <li><a routerLinkActive="active" routerLink="/index" class="nav-link px-4"> Acceuil</a></li> -->
+          <li><a routerLinkActive="active" routerLink="/Acheter" class="nav-link px-4"> Acheter</a></li>
+          <li><a routerLinkActive="active" routerLink="/Louer" class="nav-link px-4"> Louer</a></li>
+          <!-- <li><a routerLinkActive="active" routerLink="/Vendre" class="nav-link px-4"> Vendre</a></li> -->
+          <li><a routerLinkActive="active" routerLink="/Contacts" class="nav-link px-4"> Contacts</a></li>
+          <li><a routerLinkActive="active" routerLink="/Connexion" class="nav-link px-4" (click)="logout()"> Se déconnecter</a></li>
+          <li><a routerLinkActive="active" routerLink="/Creercompte" class="nav-link px-4"> Créer un compte</a></li>
+      </ul>
+      </div>
+    </div>
+    </nav><!--Navbarend-->
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+
+[
+  {
+  "Id":1,
+  "Name": "Birla House",
+  "Type":"House",
+  "Price":12000,
+  "Image":"house1"
+  },
+
+  {
+  "Id":2,
+  "Name": "Rose Villa",
+  "Type":"House",
+  "Price":18000,
+  "Image":"house2"
+  },
+
+  {
+    "Id":3,
+    "Name": "Félix Appart",
+    "Type":"House",
+    "Price":9000,
+    "Image":"house3"
+    },
+
+    {
+      "Id":4,
+      "Name": "Emmy House",
+      "Type":"House",
+      "Price":15000,
+      "Image":"house4"
+      },
+
+      {
+        "Id":5,
+        "Name": "BG House",
+        "Type":"House",
+        "Price":22000,
+        "Image":"house5"
+        },
+        {
+          "Id":6,
+          "Name": "Kech Villa",
+          "Type":"House",
+          "Price":32000,
+          "Image":"house6"
+          },
+
+        {
+          "Id":7,
+          "Name": "BG House",
+          "Type":"House",
+          "Price":22000,
+          "Image":"house7"
+          },
+        {
+          "Id":8,
+          "Name": "Kech Villa",
+          "Type":"House",
+          "Price":32000,
+          "Image":"house8"
+          },
+        {
+          "Id":9,
+          "Name": "BG House",
+          "Type":"House",
+          "Price":22000,
+          "Image":"house9"
+          },
+      {
+        "Id":10,
+        "Name": "Kech Villa",
+        "Type":"House",
+        "Price":32000,
+        "Image":"house10"
+        },
+
+        {
+          "Id":11,
+          "Name": "BG House",
+          "Type":"House",
+          "Price":22000,
+          "Image":"house11"
+          },
+          {
+            "Id":12,
+            "Name": "Kech Villa",
+            "Type":"House",
+            "Price":32000,
+            "Image":"house12"
+            }
+
+]

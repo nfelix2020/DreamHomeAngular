@@ -1,0 +1,7 @@
+.ng-invalid.ng-touched{
+  border-color: red;    /*.ng-invalid.ng-touched: ce sont les classes Angular: Une fois on TOUCHE  et que la valeur est VALID, la bordure des champs est rouge*/
+}
+
+.error-block{
+  color: red;
+}

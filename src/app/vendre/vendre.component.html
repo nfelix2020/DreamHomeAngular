@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+</head>
+<body>
+
+  <div class="container-fluid">
+  <h2>Ajouter une maison ou Apartement</h2>
+      <form (ngSubmit)='onSubmit(Form)' #Form="ngForm"   class="row g-3  me-5 ms-5 mx-1 my-1 mt-5">   <!--#Form="ngForm": L'assignation de cette variable à ngForm permet la representation du formulaire en object JS-->
+
+        <div class="col-md-12">
+            <label   class="form-label">Prénom</label>
+            <input type="text" class="form-control" #validationPrenom="ngModel"  ngModel name="prenom" value=""  minlength="5"  required >    <!--ngModel Pour pouvoir capter les données saisies dans les champs inPut-->
+            <span *ngIf="!validationPrenom.valid && validationPrenom.touched"    class="error-block">                    <!--#validationNom="ngModel": On cree cette variable, on l'assigne à ngModel et on utilise cette variable dans le span avec *ngIf pour afficher le msg d'erreur-->
+              <span *ngIf="validationNom.errors.required">Le prénom ne doit pas être vide </span>
+              <span *ngIf="validationNom.errors.minlength">Le nbre de caractères est inférieur à 5 </span>                  <!--*ngIf="!validationNom.valid && validationNom.touched": Si le champ est est TOUCHED  et INVALIDE, le msg d'erreur s'affichera-->
+            </span>                                                                                                 <!--*ngIf="validationNom.errors.required": Si le champ est vide, on afficher le message: Le champ ne doit pas être vide -->
+          </div>                                                                                                     <!--*ngIf="validationNom.errors.minLength: si le MinLength est <5, on afficher le msg : Le champ ne doit pas être vide-->
+
+          <div class="col-md-12">
+            <label   class="form-label">Nom</label>
+            <input type="text" class="form-control" #validationNom="ngModel"  ngModel name="nom" value="" required minlength="6">
+
+            <span *ngIf="!validationNom.valid && validationNom.touched"  class="error-block" >
+              <span *ngIf="validationNom.errors.required">Le nom ne doit pas être vide </span>
+              <span *ngIf="validationNom.errors.minlength">Le nbre de caractères est inférieur à 5 </span>
+            </span>
+          </div>
+
+          <div class="col-md-12">
+            <label   class="form-label">Ville</label>
+            <input type="text" class="form-control" #validationVille="ngModel"  ngModel name="ville" required>
+
+            <span *ngIf="!validationVille.valid && validationVille.touched" class="error-block">
+              <span *ngIf="validationVille.errors.required">La ville ne doit pas être vide</span>
+            </span>
+          </div>
+
+          <div class="col-md-12">
+            <label   class="form-label">Code Postal</label>
+            <input type="number" class="form-control" #validationCP="ngModel"    ngModel name="code" required >
+
+            <span *ngIf="!validationCP.valid && validationCP.touched"  class="error-block" >
+              <span *ngIf="validationCP.errors.required">Le CP ne doit pas être vide </span>
+            </span>
+
+          </div>
+
+          <div class="col-md-12">
+            <label  class="form-label">Type (Apart, Maison, Villa)</label>
+            <input type="text" class="form-control"  ngModel name="type" required>
+          </div>
+
+            <div class="col-md-12">
+              <label   class="form-label">Votre message</label>
+              <div class="form-floating">
+                <textarea class="form-control"   ngModel name="comments" style="height: 150px"></textarea>
+              </div>
+              </div>
+
+          <div class="col-12">
+            <button  [disabled]="!Form.valid"  class="btn btn-primary" type="submit" >Ajouter</button>     <!--[disabled]="!Form.valid": Si les champs REQUIRED du formulaire sont vides, le bouton est desactivé-->
+          </div>
+        </form>
+  </div>
+</body>
+</html>
+
+
+
+
